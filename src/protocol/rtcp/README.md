@@ -36,7 +36,7 @@ TYPE-ROLE = [RRoleDS = 0, RRoleDC = 1, RRoleIS = 2, RRoleIC = 3, RRoleDP = 4,
 #### RMsgConnect (Type = 1)
 ```javascript
 {
-  "N": "WhoToConnect"
+  "N": "WhoToConnect" /* Who to connect for IC->DP, Who connects this for DP->IS */
 }
 ```
 
