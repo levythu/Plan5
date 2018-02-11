@@ -27,6 +27,7 @@ Message for initializing the connection. Format:
   "V": 10000,   // a number, specifying the protocol version
   "R": /*TYPE-ROLE*/,
   "N": "WhoIAm",
+  "HeartBeat": 0, // Required hb rate (in ms), only valid in aloha from DP->IS
 }
 
 TYPE-ROLE = [RRoleDS = 0, RRoleDC = 1, RRoleIS = 2, RRoleIC = 3, RRoleDP = 4,
