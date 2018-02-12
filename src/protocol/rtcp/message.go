@@ -16,6 +16,7 @@ import (
 
 const (
   MaxMessageLength = 4 * 1024
+  SafeMessageBufferSize = MaxMessageLength + 10
 )
 
 const (
@@ -118,7 +119,7 @@ func RMessageRcv(reader io.Reader) (interface{}, error) {
 func RMessageRcvX(
     reader io.Reader, assert byte, buf []byte) (interface{}, error) {
   if buf == nil {
-    buf = make([]byte, MaxMessageLength + 10, MaxMessageLength + 10)
+    buf = make([]byte, SafeMessageBufferSize, SafeMessageBufferSize)
   }
 
   var scanner = bufio.NewScanner(reader)
